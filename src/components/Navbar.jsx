@@ -1,6 +1,41 @@
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
+  const links = (
+    <>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-green-400 border border-green-400" : ""
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-green-400 border border-green-400" : ""
+          }
+          to="/books"
+        >
+          Listed Books
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-green-400 border border-green-400" : ""
+          }
+          to="/pages"
+        >
+          Pages to Read
+        </NavLink>
+      </li>
+    </>
+  );
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -25,37 +60,13 @@ export default function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-green-400 border border-green-400 bg-white"
-                  : ""
-              }
-            >
-              {/* other code */}
-            </NavLink>
-            <li>
-              <a>Listed Books</a>
-            </li>
-            <li>
-              <a>Pages to Read</a>
-            </li>
+            {links}
           </ul>
         </div>
         <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Listed Books</a>
-          </li>
-          <li>
-            <a>Pages to Read</a>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn bg-green-500 text-white px-6">Sign In</a>
