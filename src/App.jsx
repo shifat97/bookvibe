@@ -4,9 +4,11 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="lg:container lg:mx-auto">
+    <div className="lg:container lg:mx-auto min-w-[420px]">
       <Navbar />
-      <Outlet />
+      <div className="px-2">
+        <Outlet />
+      </div>
     </div>
   );
 }
