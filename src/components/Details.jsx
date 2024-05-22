@@ -1,13 +1,14 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getDataFromLS, setDataToLS } from "../utilities/local.storage";
 
 export default function Details() {
   const bookData = useLoaderData();
   const bookID = useParams();
   const findBook = bookData.find((book) => book.id === parseInt(bookID.id));
 
-  const notify = () => {
+  const successToast = () => {
     toast.success("Book added to wishlist!", {
       position: "top-right",
       autoClose: 5000,
@@ -18,6 +19,30 @@ export default function Details() {
       progress: undefined,
       theme: "light",
     });
+  };
+
+  const warningToast = () => {
+    toast.warn("Item already exits in wishlist.", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
+  const handleLSData = () => {
+    const getLSData = getDataFromLS();
+    const checkDuplicateData = getLSData.find((data) => data === findBook.id);
+    if (!checkDuplicateData) {
+      setDataToLS(findBook.id);
+      successToast();
+    } else {
+      warningToast();
+    }
   };
 
   return (
@@ -83,13 +108,13 @@ export default function Details() {
           </table>
           <div>
             <button
-              onClick={notify}
+              onClick={handleLSData}
               className="border rounded-md px-8 py-4 font-bold mr-4"
             >
               Read
             </button>
             <button
-              onClick={notify}
+              onClick={handleLSData}
               className="bg-blue-500 rounded-md px-8 py-4 font-bold text-white"
             >
               Wishlist
