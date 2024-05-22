@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Details from "./components/Details.jsx";
 import Pages from "./components/Pages.jsx";
+import Wishlist from "./components/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <Details />,
         loader: () => fetch("data.json"),
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
       {
         path: "/pages",
