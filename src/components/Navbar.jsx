@@ -18,7 +18,7 @@ export default function Navbar() {
           className={({ isActive }) =>
             isActive ? "text-green-400 border border-green-400" : ""
           }
-          to="/books"
+          to="/wishlist"
         >
           Listed Books
         </NavLink>
