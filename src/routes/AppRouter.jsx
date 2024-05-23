@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import App from "../App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../components/Home.jsx";
-import Details from "../components/Details.jsx";
-import Pages from "../components/Pages.jsx";
-import Wishlist from "../components/Wishlist.jsx";
+import Details from "../pages/Details.jsx";
+import Chart from "../pages/Chart.jsx";
+import Wishlist from "../pages/Wishlist.jsx";
 import ReadBook from "../components/ReadBook.jsx";
 import WishlistBook from "../components/WishlistBook.jsx";
 
@@ -51,7 +51,7 @@ export const AppRouter = () => {
         },
         {
           path: "/pages",
-          element: <Pages />,
+          element: <Chart data={data} />,
         },
       ],
     },
