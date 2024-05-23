@@ -38,6 +38,16 @@ export default function Navbar() {
           className={({ isActive }) =>
             isActive ? "text-green-400 border border-green-400" : ""
           }
+          to="/about"
+        >
+          About Us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-green-400 border border-green-400" : ""
+          }
           to="/contact"
         >
           Contact Us

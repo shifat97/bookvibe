@@ -9,6 +9,7 @@ import ReadBook from "../components/ReadBook.jsx";
 import WishlistBook from "../components/WishlistBook.jsx";
 import ErrorPage from "../pages/ErrorPage.jsx";
 import Contact from "../pages/Contact.jsx";
+import About from "../pages/About.jsx";
 
 // Fetch data function
 const fetchData = () => {
@@ -55,6 +56,10 @@ export const AppRouter = () => {
         {
           path: "/pages",
           element: <Chart data={data} />,
+        },
+        {
+          path: "/about",
+          element: <About />,
         },
         {
           path: "/contact",

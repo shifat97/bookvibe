@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <div className="mt-16">
       <h1 className="text-3xl text-center font-bold bg-gray-100 p-10">
-        Contact US
+        Contact Us
       </h1>
       <form className="mt-10 grid gap-4" onSubmit={handleContactForm}>
         <label className="input input-bordered flex items-center gap-2">
