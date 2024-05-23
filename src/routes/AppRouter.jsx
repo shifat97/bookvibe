@@ -7,6 +7,7 @@ import Chart from "../pages/Chart.jsx";
 import Wishlist from "../pages/Wishlist.jsx";
 import ReadBook from "../components/ReadBook.jsx";
 import WishlistBook from "../components/WishlistBook.jsx";
+import ErrorPage from "../pages/ErrorPage.jsx";
 
 // Fetch data function
 const fetchData = async () => {
@@ -26,6 +27,7 @@ export const AppRouter = () => {
     {
       path: "/",
       element: <App />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
