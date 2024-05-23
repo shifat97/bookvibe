@@ -33,6 +33,16 @@ export default function Navbar() {
           Pages to Read
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-green-400 border border-green-400" : ""
+          }
+          to="/contact"
+        >
+          Contact Us
+        </NavLink>
+      </li>
     </>
   );
 
