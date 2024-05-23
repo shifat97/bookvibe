@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function Wishlist() {
+export default function Wishlist({ data }) {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
@@ -61,8 +62,12 @@ export default function Wishlist() {
             <span>Wishlist Books</span>
           </Link>
         </div>
-        <Outlet />
+        <Outlet context={[data]} />
       </div>
     </div>
   );
 }
+
+Wishlist.propTypes = {
+  data: PropTypes.array,
+};

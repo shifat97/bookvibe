@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -7,11 +7,11 @@ import {
   setWishlistDataToLS,
   getWishlistDataFromLS,
 } from "../utilities/local.storage";
+import PropTypes from "prop-types";
 
-export default function Details() {
-  const bookData = useLoaderData();
+export default function Details({ data }) {
   const bookID = useParams();
-  const findBook = bookData.find((book) => book.id === parseInt(bookID.id));
+  const findBook = data.find((book) => book.id === parseInt(bookID.id));
 
   const successToast = () => {
     toast.success("Book added to list!", {
@@ -143,3 +143,7 @@ export default function Details() {
     </div>
   );
 }
+
+Details.propTypes = {
+  data: PropTypes.array,
+};

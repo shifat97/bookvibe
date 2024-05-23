@@ -1,22 +1,23 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { getDataFromLS } from "../utilities/local.storage";
-import { useLoaderData } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import List from "./List";
 
 export default function ReadBook() {
   const [readBooksData, setReadBooksData] = useState([]);
-  const getAllData = useLoaderData();
+  const [data] = useOutletContext();
 
   useEffect(() => {
     const getReadBooksData = getDataFromLS();
 
-    if (getAllData.length > 0) {
-      const filteredData = getAllData.filter((data) =>
+    if (data.length > 0) {
+      const filteredData = data.filter((data) =>
         getReadBooksData.includes(data.id)
       );
       setReadBooksData(filteredData);
     }
-  }, [getAllData]);
+  }, [data]);
 
   return (
     <div>
@@ -26,3 +27,7 @@ export default function ReadBook() {
     </div>
   );
 }
+
+ReadBook.propTypes = {
+  data: PropTypes.array,
+};
