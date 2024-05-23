@@ -4,12 +4,20 @@ import PropTypes from "prop-types";
 
 export default function Wishlist({ data }) {
   const [tabIndex, setTabIndex] = useState(0);
+  const [selectValue, setSelectValue] = useState("");
+
+  const handleSortFunction = (event) => {
+    setSelectValue(event.target.value);
+  };
 
   return (
     <div className="mt-10">
       <h1 className="text-3xl text-center font-bold bg-gray-100 p-10">Books</h1>
-      <select className="select w-full max-w-[150px] bg-green-400 text-white text-md font-bold my-6 block mx-auto">
-        <option disabled selected>
+      <select
+        onChange={handleSortFunction}
+        className="select w-full max-w-[150px] bg-green-400 text-white text-md font-bold my-6 block mx-auto focus:ring-0 focus:outline-none"
+      >
+        <option selected disabled>
           Sort By
         </option>
         <option>Rating</option>
@@ -62,7 +70,7 @@ export default function Wishlist({ data }) {
             <span>Wishlist Books</span>
           </Link>
         </div>
-        <Outlet context={[data]} />
+        <Outlet context={[data, selectValue]} />
       </div>
     </div>
   );

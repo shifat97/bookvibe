@@ -6,7 +6,7 @@ import List from "./List";
 
 export default function ReadBook() {
   const [readBooksData, setReadBooksData] = useState([]);
-  const [data] = useOutletContext();
+  const [data, selectValue] = useOutletContext();
 
   useEffect(() => {
     const getReadBooksData = getDataFromLS();
@@ -15,9 +15,18 @@ export default function ReadBook() {
       const filteredData = data.filter((data) =>
         getReadBooksData.includes(data.id)
       );
+
+      if (selectValue === "Rating") {
+        filteredData.sort((a, b) => b.rating - a.rating);
+      } else if (selectValue === "Publisher Year") {
+        filteredData.sort((a, b) => b.year_published - a.year_published);
+      } else if (selectValue === "Number of Pages") {
+        filteredData.sort((a, b) => b.pages - a.pages);
+      }
+
       setReadBooksData(filteredData);
     }
-  }, [data]);
+  }, [selectValue, data]);
 
   return (
     <div>
