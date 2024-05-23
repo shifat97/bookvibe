@@ -2,7 +2,7 @@
   {
     "id": 1,
     "audience": ["Young Adults", "Adults"],
-    "image": "src/assets/Book1.png",
+    "image": "public/assets/Book1.png",
     "title": "The Alchemist",
     "author": "Paulo Coelho",
     "type": "Adventure",
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "audience": ["Children", "Young Adults"],
-    "image": "src/assets/Book2.png",
+    "image": "public/assets/Book2.png",
     "title": "Harry Potter and the Philosopher's Stone",
     "author": "J.K. Rowling",
     "type": "Fantasy",
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "audience": ["Teens", "Adults"],
-    "image": "src/assets/Book3.png",
+    "image": "public/assets/Book3.png",
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "type": "Fiction",
@@ -41,7 +41,7 @@
   {
     "id": 4,
     "audience": ["Adults"],
-    "image": "src/assets/Book4.png",
+    "image": "public/assets/Book4.png",
     "title": "1984",
     "author": "George Orwell",
     "type": "Dystopian",
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "audience": ["Teens", "Adults"],
-    "image": "src/assets/Book5.png",
+    "image": "public/assets/Book5.png",
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "type": "Fantasy",
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "audience": ["Children", "Young Adults"],
-    "image": "src/assets/Book6.png",
+    "image": "public/assets/Book6.png",
     "title": "Alice's Adventures in Wonderland",
     "author": "Lewis Carroll",
     "type": "Fantasy",
@@ -80,7 +80,7 @@
   {
     "id": 7,
     "audience": ["Teens", "Adults"],
-    "image": "src/assets/Book7.png",
+    "image": "public/assets/Book7.png",
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "type": "Romance",
@@ -93,7 +93,7 @@
   {
     "id": 8,
     "audience": ["Children"],
-    "image": "src/assets/Book8.png",
+    "image": "public/assets/Book8.png",
     "title": "Matilda",
     "author": "Roald Dahl",
     "type": "Children's",
@@ -106,7 +106,7 @@
   {
     "id": 9,
     "audience": ["Young Adults", "Adults"],
-    "image": "src/assets/Book9.png",
+    "image": "public/assets/Book9.png",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "type": "Fiction",
@@ -119,7 +119,7 @@
   {
     "id": 10,
     "audience": ["Teens", "Adults"],
-    "image": "src/assets/Book1.png",
+    "image": "public/assets/Book2.png",
     "title": "The Catcher in the Rye",
     "author": "J.D. Salinger",
     "type": "Coming-of-Age",

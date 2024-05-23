@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import BookImage from "../assets/Book1.png";
+import BookImage from "../../public/assets/Book1.png";
 
 export default function Banner() {
   return (

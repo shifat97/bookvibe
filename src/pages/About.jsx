@@ -1,4 +1,4 @@
-import StoreImage from "../assets/store.jpg";
+import StoreImage from "../../public/assets/store.jpg";
 
 export default function About() {
   return (

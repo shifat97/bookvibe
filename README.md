@@ -1,5 +1,5 @@
 <h1>Book Vibe</h1>
-<p>Live URL: [Insert live URL here]</p>
+<p>Live URL: <a>https://bookvibe-phero-assignment.surge.sh/</a></p>
 <ul>
     <li>Users can look for different types of books.</li>
     <li>Users can check the details of the book of their choice.</li>

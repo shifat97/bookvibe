@@ -24,7 +24,7 @@ export default function Home() {
                 <div className="bg-gray-100 rounded-xl p-6">
                   <img
                     className="block mx-auto h-[230px]"
-                    src={book.image}
+                    src={`${book.image}`}
                     alt=""
                   />
                 </div>
