@@ -42,6 +42,7 @@ export default function Details({ data }) {
   const handleReadData = () => {
     const getLSData = getDataFromLS();
     const checkDuplicateData = getLSData.find((data) => data === findBook.id);
+
     if (!checkDuplicateData) {
       setReadDataToLS(findBook.id);
       successToast();
@@ -52,10 +53,13 @@ export default function Details({ data }) {
 
   const handleWishlistData = () => {
     const getLSData = getDataFromLS();
-
     const getWishlistData = getWishlistDataFromLS();
-    const checkDuplicateData = getLSData.find((data) => data === findBook.id);
-    if (!checkDuplicateData || !getWishlistData) {
+    const checkDuplicateRead = getLSData.find((data) => data === findBook.id);
+    const checkDuplicateWishlist = getWishlistData.find(
+      (data) => data === findBook.id
+    );
+
+    if (!checkDuplicateRead && !checkDuplicateWishlist) {
       setWishlistDataToLS(findBook.id);
       successToast();
     } else {

@@ -8,13 +8,13 @@ export default function Wishlist({ data }) {
   return (
     <div className="mt-10">
       <h1 className="text-3xl text-center font-bold bg-gray-100 p-10">Books</h1>
-      <select
-        className="bg-green-500 text-white px-2 py-4 mt-6 rounded-md border-r-8 border-r-green-500  block mx-auto focus:ring-0 focus:outline-none"
-        name=""
-      >
-        <option value="rating">Sort by Rating</option>
-        <option value="year">Sort by Year</option>
-        <option value="page">Sort by Page</option>
+      <select className="select w-full max-w-[150px] bg-green-400 text-white text-md font-bold my-6 block mx-auto">
+        <option disabled selected>
+          Sort By
+        </option>
+        <option>Rating</option>
+        <option>Number of Pages</option>
+        <option>Publisher Year</option>
       </select>
       <div className="mt-6 w-full">
         <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:text-gray-800 border-b">

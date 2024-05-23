@@ -10,7 +10,7 @@ import WishlistBook from "../components/WishlistBook.jsx";
 import ErrorPage from "../pages/ErrorPage.jsx";
 
 // Fetch data function
-const fetchData = async () => {
+const fetchData = () => {
   return fetch("data.json").then((response) => response.json());
 };
 
