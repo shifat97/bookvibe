@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDataFromLS } from "../utilities/local.storage";
 import { useLoaderData } from "react-router-dom";
-import Book from "./Book";
+import List from "./List";
 
 export default function ReadBook() {
   const [readBooksData, setReadBooksData] = useState([]);
@@ -21,7 +21,7 @@ export default function ReadBook() {
   return (
     <div>
       {readBooksData.map((book) => (
-        <Book key={book.id} book={book} />
+        <List key={book.id} book={book} />
       ))}
     </div>
   );

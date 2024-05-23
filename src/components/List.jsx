@@ -19,9 +19,13 @@ export default function Book({ book }) {
   } = book;
 
   return (
-    <div className="flex items-center gap-6 rounded-xl border p-6 mt-10">
+    <div className="flex flex-col lg:flex-row gap-6 rounded-xl border p-6 mt-10">
       <div className="bg-gray-100 p-4">
-        <img className="h-[200px]" src={image} alt="" />
+        <img
+          className="h-[150px] block mx-auto lg:mx-0"
+          src={`../../${image}`}
+          alt={title}
+        />
       </div>
       <div className="flex-1">
         <h1 className="text-xl font-bold">{title}</h1>
